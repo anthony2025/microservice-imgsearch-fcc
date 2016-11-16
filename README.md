@@ -7,8 +7,8 @@ Live at https://microservice-imgsearch-fcc.herokuapp.com/
 * I can get a list of the most recently submitted search strings.
 
 ### Example usage
-* https://microservice-imgsearch-fcc.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10
-* https://microservice-imgsearch-fcc.herokuapp.com/api/latest/imagesearch/
+* https://microservice-imgsearch-fcc.herokuapp.com/api/imgsearch/lolcats%20funny?offset=10
+* https://microservice-imgsearch-fcc.herokuapp.com/api/recent/
 
 ### Example output
 {

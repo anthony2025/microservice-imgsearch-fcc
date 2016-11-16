@@ -14,14 +14,15 @@ mongoose.connect(DBURI)
 
 // setting up bodyParser
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
 
-// setting up the express router
-const taskRouter = require('./router')
-app.use('/api/tasks', taskRouter)
+// setting up the routers
+const searchRouter = require('./searchRouter')
+app.use('/api/imgsearch', searchRouter)
+const recentRouter = require('./recentRouter')
+app.use('/api/recent', recentRouter)
 
 // setting up a homepage
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/index.html')))
 
-// setting up the express server
+// setting up the server
 app.listen(PORT, () => console.log('App running on port: ' + PORT))
