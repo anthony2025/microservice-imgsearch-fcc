@@ -1,29 +1,19 @@
-Minimal MERN REST API with upcoming GraphQL support. This is meant as a boilerplate for future projects.
+Node microservice that allows to query for image urls.
+Live at https://microservice-imgsearch-fcc.herokuapp.com/
 
-Live at https://mern-boilerplate-server.herokuapp.com/
-
-### In Progress
-* GraphQL
-* CORS support
+### User stories
+* I can get the image URLs, alt text and page urls for a set of images relating to a given query.
+* I can paginate through the responses by adding a ?offset=2 parameter to the URL.
+* I can get a list of the most recently submitted search strings.
 
 ### Example usage
-* https://mern-boilerplate-server.herokuapp.com/api/tasks/
-* https://mern-boilerplate-server.herokuapp.com/api/tasks/:taskId
+* https://microservice-imgsearch-fcc.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10
+* https://microservice-imgsearch-fcc.herokuapp.com/api/latest/imagesearch/
 
 ### Example output
 {
-  "_id": "580ee8dfe4360c5c6c8c4400",
-  "title": "do",
-  "status": true
+  "url": "...",
+  "snippet": "...",
+  "thumbnail": "...",
+  "context": "..."
 }
-
-### Acknowledgments
-* **Sandro Sanchez** - *Initial work, fork and guidance* - [sandropucp](https://github.com/sandropucp)
-
-<br>
-
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-
-<a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
-  <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
-</a>

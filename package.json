@@ -1,5 +1,5 @@
 {
-  "name": "mern-todo-server",
+  "name": "microservice-imgsearch-fcc",
   "version": "0.1.0",
   "main": "src/app.js",
   "dependencies": {
