@@ -1,5 +1,14 @@
-function getResultsFromApi (query, offset) {
-  return {results: 'results from getResultsFromApi'}
+const request = require('request')
+
+function getResultsFromApi (query, offset = 0) {
+  const options = {
+    url: `https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=${query}&count=10&offset=${offset}`,
+    headers: {'Ocp-Apim-Subscription-Key': process.env.APIKEY}
+  }
+  request.get(options, (err, res, body) => {
+    if (err) return err
+    return body
+  })
 }
 
 function saveRecentTerm (term, Model) {

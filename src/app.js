@@ -1,7 +1,6 @@
 // require dependencies
+const path = require('path')
 const mongoose = require('mongoose')
-const bodyParser = require('body-parser')
-const path = require ('path')
 const app = require('express')()
 
 // setting up environment variables
@@ -11,9 +10,6 @@ const DBURI = process.env.DBURI || 'mongodb://localhost/tododb'
 
 // setting up mongoose
 mongoose.connect(DBURI)
-
-// setting up bodyParser
-app.use(bodyParser.urlencoded({ extended: true }))
 
 // setting up the routers
 const searchRouter = require('./searchRouter')

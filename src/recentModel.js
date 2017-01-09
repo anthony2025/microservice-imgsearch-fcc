@@ -6,10 +6,11 @@ const recentTermSchema = new mongoose.Schema({
   time: {type: Date, required: true}
 })
 
-  .set('toJSON', {transform : function (doc, ret) {
+// gets rid of _id and __v when printing to json
+  .set('toJSON', {transform: function (doc, ret) {
     delete ret._id
     delete ret.__v
     return ret
-  }});
+  }})
 
 module.exports = mongoose.model('RecentTerm', recentTermSchema)
